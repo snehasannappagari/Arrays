@@ -1,0 +1,31 @@
+public class TwoSum {
+
+	public int[] twoSum(int [] nums,int targetsum)
+	{
+	    for(int i=0;i<nums.length-1;i++)
+	    {
+	        for(int j=i+1;j<nums.length-1;j++)
+	        {
+	            if(nums[i]+nums[j]==targetsum)
+	            {
+	                return new int[]{i,j};//index will be returned
+	                
+	            }
+	        }
+	    }
+	    throw new IllegalArgumentException("No Two Numbers add up to the target sum");
+	}
+	public static void main(String[] args) 
+	{
+	    TwoSum twosum=new TwoSum();
+	    int[] nums={1,5,8,7,2,5};
+	    int targetsum=9;
+	    int[] result=twosum.twoSum(nums,targetsum);
+	    for(int i=0;i<result.length;i++)
+	    {
+	    	System.out.println(result[i]);//index will be printed
+	    }
+	    
+	}
+
+}
